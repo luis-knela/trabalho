@@ -25,9 +25,9 @@ function checkinputs() {
 
     if (emailValue === '') return setErrorFor(email, 'campo obrigatorio');
     else  if(!checkEmail(emailValue)) return setErrorFor(email, 'email invalido');
-    else return setSuccessFor(email);
+    else { setSuccessFor(email); }
 
-   if (passwordValue === '')
+   if (passwordValue === '') return
 }
 
 function setErrorFor(input, message) {
