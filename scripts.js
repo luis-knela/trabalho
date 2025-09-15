@@ -22,6 +22,12 @@ function checkinputs() {
     } else {
         setSuccessFor(username);
     }
+
+    if (emailValue === '') return setErrorFor(email, 'campo obrigatorio');
+    else  if(!checkEmail(emailValue)) return setErrorFor(email, 'email invalido');
+    else return setSuccessFor(email);
+
+   if (passwordValue === '')
 }
 
 function setErrorFor(input, message) {
@@ -38,7 +44,6 @@ function setSuccessFor(input) {
 
     formControl.className = 'form-control success';
 }
-
 
 
 function checkEmail(email) {
