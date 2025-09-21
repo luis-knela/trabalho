@@ -3,12 +3,29 @@ const username = document.getElementById('username');
 const email = document.getElementById('email');
 const password = document.getElementById('password');
 const passwordconfirmation = document.getElementById('password-confirmation');
+const select = document.getElementById('tipo');
+
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     checkinputs();
 })
+
+
+function checktipo(){
+ const select = document.getElementById('tipo');
+ let valor = select.value;
+ let caixacfp = document.getElementById('cpf');
+
+ if (valor === 'pf' ) {
+   caixacfp.style.display = "inline";
+ } else{
+    caixacfp.style.display = "none";
+ }
+}
+checktipo()
+
 
 function checkinputs() {
     const usernameValue = username.value;
